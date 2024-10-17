@@ -5,7 +5,7 @@
 <c:set var="dateFormat" value="dd/MM/yyyy HH:mm" />
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
-	<head>
+  <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <link rel="stylesheet" type="text/css" href="${home}/css/styles.css">
     <script src="https://kit.fontawesome.com/4358b9453c.js" crossorigin="anonymous"></script>
@@ -14,7 +14,7 @@
     <script defer src="${home}/js/swup.js"></script>
     <title>NominasWeb | Nóminas</title>
     <style>.preload * { transition: none !important; }</style>
-	</head>
+  </head>
   <body class="preload">
     <header>
       <c:choose>
@@ -167,5 +167,5 @@
     <script>
       window.onload = setTimeout(() => document.body.classList.remove("preload"), 100);
     </script>
-	</body>
+  </body>
 </html>
