@@ -3,15 +3,15 @@
 <c:set var="home" value="${pageContext.request.contextPath}" />
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
-	<head>
+  <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <link rel="stylesheet" type="text/css" href="${home}/css/styles.css">
     <script src="https://kit.fontawesome.com/4358b9453c.js" crossorigin="anonymous"></script>
     <title>NominasWeb | Registro</title>
-	</head>
+  </head>
   <body>
     <header>
- 		  <h1>Nuevo empleado</h1>
+      <h1>Nuevo empleado</h1>
       <nav>
         <a id="back" href="javascript:window.location.replace(document.referrer);">
           Volver <i class="fa-solid fa-right-from-bracket"></i>
@@ -53,5 +53,5 @@
         </div>
       </form>
     </main>
-	</body>
+  </body>
 </html>
