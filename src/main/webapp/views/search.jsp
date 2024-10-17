@@ -11,7 +11,7 @@
   </head>
   <body>
     <header>
- 		  <h1>Búsqueda por filtros</h1>
+      <h1>Búsqueda por filtros</h1>
       <nav>
         <a id="back" href="javascript:window.location.replace(document.referrer);">
           Volver <i class="fa-solid fa-right-from-bracket"></i>
@@ -26,7 +26,7 @@
           <input type="text" name="dni" placeholder pattern="[0-9]{8}[A-Z]">
           <label for="dni">DNI</label>
         </p>
-                <p>
+        <p>
           <i class="fa-solid fa-keyboard"></i>
           <input type="text" name="name" placeholder>
           <label for="name">Nombre</label>
@@ -63,5 +63,5 @@
         </div>
       </form>
     </main>
-	</body>
+  </body>
 </html>
