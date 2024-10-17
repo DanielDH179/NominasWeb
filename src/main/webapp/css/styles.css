@@ -70,8 +70,7 @@ form {
   backdrop-filter: blur(10px) brightness(0.5);
   border-radius: 16px;
   box-shadow: 0 0 4px gray;
-  margin-left: calc(0.5 * (var(--body-w) - var(--form-w)));
-  margin-top: 3px;
+  margin: 3px auto 0;
   padding: 30px;
   width: var(--form-w);
 }
@@ -127,6 +126,11 @@ input::-webkit-outer-spin-button {
   -webkit-appearance: none;
 }
 
+input[type='password'] {
+  font-family: Verdana;
+  letter-spacing: 1px;
+}
+
 input[type='number'] {
   -moz-appearance: textfield;
   appearance: textfield;
@@ -152,7 +156,7 @@ input[type='radio'] + label {
   z-index: 1;
 }
 
-input[type='radio']:checked + label[for="male"] {
+input[type='radio']:checked + label[for='male'] {
   background-color: dodgerblue;
   border: 2px solid lightskyblue;
   color: lightskyblue;
@@ -161,7 +165,7 @@ input[type='radio']:checked + label[for="male"] {
   }
 }
 
-input[type='radio']:checked + label[for="female"] {
+input[type='radio']:checked + label[for='female'] {
   background-color: palevioletred;
   border: 2px solid pink;
   color: pink;
@@ -170,12 +174,12 @@ input[type='radio']:checked + label[for="female"] {
   }
 }
 
-label[for="male"]:hover {
+label[for='male']:hover {
   border: 2px solid dodgerblue;
   color: dodgerblue;
 }
 
-label[for="female"]:hover {
+label[for='female']:hover {
   border: 2px solid palevioletred;
   color: palevioletred;
 }
@@ -240,7 +244,7 @@ label[for="female"]:hover {
   border-top-left-radius: 7px;
   border-top-right-radius: 7px;
   cursor: default;
-  margin-left: calc(0.5 * (var(--body-w) - var(--logger)));
+  margin: 0 auto;
   padding: 4px 6px;
   user-select: none;
   width: calc(var(--logger) - 14px);
@@ -296,9 +300,7 @@ label[for="female"]:hover {
   border-bottom-right-radius: 7px;
   border-top: none;
   color: white;
-  margin: 0;
-  margin-bottom: 30px;
-  margin-left: calc(0.5 * (var(--body-w) - var(--logger)));
+  margin: 0 auto 30px;
   min-height: 17.5px;
   overflow: hidden scroll;
   padding: 20px;

@@ -8,11 +8,11 @@
     <link rel="stylesheet" type="text/css" href="${home}/css/styles.css">
     <script src="https://kit.fontawesome.com/4358b9453c.js" crossorigin="anonymous"></script>
     <script defer src="${home}/js/logger.js"></script>
-    <title>500</title>
+    <title>401</title>
   </head>
   <body>
     <header>
- 		  <h1>Error 500 :(</h1>
+ 		  <h1>Error 401 :(</h1>
       <nav>
         <a id="back" href="${home}">
           Volver <i class="fa-solid fa-right-from-bracket"></i>
@@ -26,7 +26,7 @@
     </div>
     <pre id="logger">
       <i class="fa-solid fa-bug fa-fade"></i>
-      ERROR INTERNO DEL SERVIDOR: Inténtalo de nuevo más tarde
+      ACCESO PROHIBIDO: No has iniciado sesión, la navegación está desactivada
     </pre>
   </body>
 </html>

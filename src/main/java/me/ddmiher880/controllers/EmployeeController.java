@@ -21,7 +21,7 @@ import me.ddmiher880.utils.SortCriterion;
 @WebServlet("/empresa")
 public class EmployeeController extends HttpServlet {
 
-	private static final long serialVersionUID = 1L;
+	private static final long serialVersionUID = 182736451827364512L;
 	
   /** Constructor por defecto. */
 	public EmployeeController() {

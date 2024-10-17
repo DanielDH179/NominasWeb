@@ -1,6 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" isELIgnored="false" %>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt" %>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+<%@ include file="../WEB-INF/session.jspf" %>
 <c:set var="home" value="${pageContext.request.contextPath}" />
 <c:set var="dateFormat" value="dd/MM/yyyy HH:mm" />
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
@@ -87,7 +88,7 @@
           </c:otherwise>
         </c:choose>
       </pre>
-      <c:if test="${!list.isEmpty()}">
+      <c:if test="${list != null && !list.isEmpty()}">
         <table id="swup" class="transition-main">
           <tr>
             <th>DNI</th>

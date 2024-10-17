@@ -1,0 +1,8 @@
+<%
+  HttpSession hs = request.getSession(false);
+  if (hs == null || hs.getAttribute("session") == null) {
+    response.setStatus(HttpServletResponse.SC_FORBIDDEN);
+    request.getRequestDispatcher("/errors/401.jsp").forward(request, response);
+    return;
+  }
+%>

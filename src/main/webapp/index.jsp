@@ -33,13 +33,56 @@
         <div class="dot green"><i class="fa-solid fa-plus"></i></div>
       </div>
       <pre id="logger">
-        <i class="fa-solid fa-circle-info fa-fade"></i>
-        Esta ventana se puede minimizar, cerrar y redimensionar (botones y esquina inferior derecha)
-        <br />
-        <br />
-        <i class="fa-solid fa-circle-info fa-fade"></i>
-        Práctica de 'Desarrollo Web en Entorno Servidor' por Daniel Dmitrienco Herrera :)
+        <c:choose>
+          <c:when test="${session != null && msg != null}">${msg}</c:when>
+          <c:when test="${msg != null}">
+            <i class="fa-solid ${msg.isError() ? "fa-bug" : "fa-circle-info"} fa-fade"></i>
+            ${msg.toString()}
+          </c:when>
+          <c:when test="${more != null}">
+            <i class="fa-solid fa-bug fa-fade"></i> ${more}
+          </c:when>
+          <c:otherwise>
+            <i class="fa-solid fa-circle-info fa-fade"></i>
+            Esta ventana se puede minimizar, cerrar y redimensionar (botones y esquina inferior derecha)
+            <br />
+            <br />
+            <i class="fa-solid fa-circle-info fa-fade"></i>
+            La navegación está desactivada en el sitio web. Inicia sesión aquí para acceder a los datos
+            <br />
+            <br />
+            <i class="fa-solid fa-circle-info fa-fade"></i>
+            Práctica de 'Desarrollo Web en Entorno Servidor' por Daniel Dmitrienco Herrera :)
+          </c:otherwise>
+        </c:choose>
       </pre>
+      <c:choose>
+        <c:when test="${session == null}">
+          <form action="login" method="post">
+            <p>
+              <i class="fa-solid fa-user"></i>
+              <input type="text" id="user" name="user" placeholder required>
+              <label for="user">Usuario</label>
+            </p>
+            <p>
+              <i class="fa-solid fa-lock"></i>
+              <input type="password" id="pass" name="pass" placeholder required>
+              <label for="pass">Contraseña</label>
+            </p>
+            <div class="buttons">
+              <input type="submit" value="Iniciar Sesión">
+              <input type="reset" value="Borrar">
+            </div>
+          </form>
+        </c:when>
+        <c:otherwise>
+          <form action="logout" method="get">
+            <div class="buttons">
+              <input type="submit" value="Cerrar Sesión">
+            </div>
+          </form>
+        </c:otherwise>
+      </c:choose>
     </main>
     <script>
       window.onload = setTimeout(() => document.body.classList.remove("preload"), 100);

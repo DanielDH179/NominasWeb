@@ -15,6 +15,12 @@ SET character_set_client = 'utf8mb4';
 SET character_set_results = 'utf8mb4';
 -- SHOW variables LIKE 'character_%';
 
+CREATE TABLE IF NOT EXISTS auth_user(
+  username NVARCHAR(50) PRIMARY KEY,
+  password NVARCHAR(100) NOT NULL,
+  alias NVARCHAR(100)
+);
+
 CREATE TABLE employee(
   name NVARCHAR(100) NOT NULL,
   dni CHAR(9) PRIMARY KEY,
@@ -63,6 +69,9 @@ END $$
 
 DELIMITER ;
 
+INSERT INTO auth_user VALUES
+  ('admin', 'admin', 'ddmiher880');
+
 INSERT INTO employee (name, dni, sex, category, years, signed_up_date) VALUES
   ('Juan Pérez', '12345678Z', 'M', 3, 5, '2019-06-01 08:30:00'),
   ('María López', '87654321X', 'F', 5, 8, '2015-03-15 09:00:00'),
@@ -82,7 +91,7 @@ INSERT INTO employee (name, dni, sex, category, years, signed_up_date) VALUES
   ('Vanessa Morales', '88889999J', 'F', 4, 7, '2017-06-22 09:45:00'),
   ('Javier Ortega', '33333333P', 'M', 9, 0, '2024-02-14 14:30:00');
 
-INSERT INTO payroll (dni, salary) VALUES
+INSERT INTO payroll VALUES
   ('12345678Z', 115000),
   ('87654321X', 170000),
   ('11223344B', 125000),

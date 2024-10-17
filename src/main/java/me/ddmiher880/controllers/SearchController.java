@@ -15,7 +15,7 @@ import me.ddmiher880.exceptions.EmployeeException;
 @WebServlet("/buscar")
 public class SearchController extends HttpServlet {
 
-	private static final long serialVersionUID = 2L;
+	private static final long serialVersionUID = 827364512938475612L;
 	
   /** Constructor por defecto. */
 	public SearchController() {

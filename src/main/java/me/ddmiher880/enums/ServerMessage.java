@@ -2,6 +2,10 @@ package me.ddmiher880.enums;
 
 public enum ServerMessage {
 
+  LOGGED_IN("Inicio de sesión correcto, bienvenid@ %s", false),
+  LOGGED_OUT("Cierre de sesión correcto", false),
+  ERROR_LOGIN("ERROR: Credenciales incorrectas", true),
+
   CREATED("Empleado %s registrado correctamente", false),
   UPDATED("Empleado %s actualizado correctamente", false),
   DELETED("Empleado %s eliminado correctamente", false),
