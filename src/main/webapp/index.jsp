@@ -34,7 +34,10 @@
       </div>
       <pre id="logger">
         <c:choose>
-          <c:when test="${session != null && msg != null}">${msg}</c:when>
+          <c:when test="${session != null && msg != null}">
+            <i class="fa-solid fa-circle-info fa-fade"></i>
+            ${msg}
+          </c:when>
           <c:when test="${msg != null}">
             <i class="fa-solid ${msg.isError() ? "fa-bug" : "fa-circle-info"} fa-fade"></i>
             ${msg.toString()}
@@ -47,10 +50,12 @@
             Esta ventana se puede minimizar, cerrar y redimensionar (botones y esquina inferior derecha)
             <br />
             <br />
-            <i class="fa-solid fa-circle-info fa-fade"></i>
-            La navegación está desactivada en el sitio web. Inicia sesión aquí para acceder a los datos
-            <br />
-            <br />
+            <c:if test="${session == null}">
+              <i class="fa-solid fa-circle-info fa-fade"></i>
+              La navegación está desactivada en el sitio web. Inicia sesión aquí para acceder a los datos
+              <br />
+              <br />
+            </c:if>
             <i class="fa-solid fa-circle-info fa-fade"></i>
             Práctica de 'Desarrollo Web en Entorno Servidor' por Daniel Dmitrienco Herrera :)
           </c:otherwise>
